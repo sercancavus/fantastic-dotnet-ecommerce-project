@@ -3,7 +3,7 @@
 using App.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-internal class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
     : DbContext(options)
 {
     public DbSet<UserEntity> Users { get; set; }

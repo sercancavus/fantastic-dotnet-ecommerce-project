@@ -1,12 +1,25 @@
+using App.Data.Infrastructure;
 using App.Eticaret;
 using App.Services.Abstract;
 using App.Services.Concrete;
 using IdentityModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Gerekli namespace'leri en tepeye eklediðinden emin ol:
+// using Microsoft.EntityFrameworkCore;
+// using App.Data.Infrastructure; (veya DbContext'in olduðu namespace)
+
+// Geçici olarak baðlantý adresini elle veriyoruz:
+// Doðrusu budur:
+var connectionString = builder.Configuration.GetConnectionString("SqlServer");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddControllersWithViews();
 
