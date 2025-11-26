@@ -1,88 +1,139 @@
-\# 🛒 Fantastic E-Commerce Project
+<!-- Language Navigation -->
+
+<div align="center">
+<a href="#-fantastic-e-commerce-project">🇺🇸 English</a> | <a href="#-fantastic-e-ticaret-projesi">🇹🇷 Türkçe</a>
+</div>
+
+🛒 Fantastic E-Commerce Project
+
+<div align="center">
+
+</div>
+
+Fantastic E-Commerce is a modern, scalable shopping platform built with ASP.NET Core MVC. The project follows N-Tier Architecture principles to ensure clean code, maintainability, and scalability. It features a complete shopping experience from product browsing to checkout simulation.
+
+🚀 Key Features
+
+👤 User Panel
+
+Authentication: Secure registration and login system using ASP.NET Core Identity.
+
+Product Catalog: Filter products by categories, view details, and prices.
+
+Smart Cart: Dynamic shopping cart management (Add, Remove, Update Quantity).
+
+Checkout Simulation: Address selection and order completion process.
+
+🛠 Admin Dashboard
+
+Product Management: Full CRUD operations for products with image upload support.
+
+Category Management: Create and manage product categories dynamically.
+
+Role Management: Assign roles (Admin/User) to manage access control.
+
+Order Tracking: View incoming orders and update their status.
+
+💻 Tech Stack & Architecture
+
+Backend: C#, .NET 8.0, ASP.NET Core MVC
+
+Database: MS SQL Server, Entity Framework Core (Code First)
+
+Frontend: HTML5, CSS3, Bootstrap 5, JavaScript
+
+Architecture: N-Tier Architecture (Entity, DataAccess, Business, UI Layers)
+
+Design Patterns: Repository Pattern, Dependency Injection
+
+⚙️ Installation & Setup
+
+Clone the repository:
+
+git clone [https://github.com/sercancavus/fantastic-dotnet-ecommerce-project.git](https://github.com/sercancavus/fantastic-dotnet-ecommerce-project.git)
 
 
+Configure Database:
+Update the ConnectionStrings in appsettings.json with your local SQL Server instance.
 
-\*\*ASP.NET Core MVC\*\* mimarisi kullanılarak geliştirilmiş, modern ve ölçeklenebilir bir E-Ticaret platformu. Bu proje, \*\*N-Tier Architecture (Katmanlı Mimari)\*\* prensiplerine sadık kalınarak, uçtan uca bir alışveriş deneyimi sunmak amacıyla tasarlanmıştır.
+Run Migrations:
+Open your terminal in the project directory and run:
 
-
-
----
-
-
-
-\## 🚀 Özellikler
+dotnet ef database update --project App.Data --startup-project App.Eticaret
 
 
+Run the App:
 
-\### 👤 Kullanıcı Paneli
-
-\* \*\*Üyelik Sistemi:\*\* Identity altyapısı ile güvenli kayıt ve giriş.
-
-\* \*\*Sepet \& Sipariş:\*\* Dinamik sepet yönetimi ve sipariş simülasyonu.
-
-\* \*\*Ürün İnceleme:\*\* Kategori bazlı filtreleme ve detay sayfaları.
+dotnet run --project App.Eticaret
 
 
+<!-- TURKISH SECTION STARTS HERE -->
 
-\### 🛠 Yönetici (Admin) Paneli
+🛒 Fantastic E-Ticaret Projesi
 
-\* \*\*CRUD İşlemleri:\*\* Ürün, Kategori ve Rol yönetimi.
+Fantastic E-Commerce, ASP.NET Core MVC kullanılarak geliştirilmiş modern ve ölçeklenebilir bir alışveriş platformudur. Proje, temiz kod ve sürdürülebilirlik sağlamak amacıyla Katmanlı Mimari (N-Tier Architecture) prensiplerine sadık kalınarak tasarlanmıştır.
 
-\* \*\*Raporlama:\*\* Sipariş durumlarını takip etme.
+🚀 Özellikler
 
+👤 Kullanıcı Paneli
 
+Üyelik Sistemi: ASP.NET Core Identity altyapısı ile güvenli kayıt ve giriş işlemleri.
 
----
+Ürün Kataloğu: Kategori bazlı filtreleme ve detaylı ürün inceleme sayfaları.
 
+Akıllı Sepet: Dinamik sepet yönetimi (Ekle, Çıkar, Adet Güncelle).
 
+Sipariş Simülasyonu: Adres seçimi ve sipariş tamamlama adımları.
 
-\## 💻 Teknolojiler \& Mimari
+🛠 Yönetici (Admin) Paneli
 
+Ürün Yönetimi: Resim yükleme desteği ile tam kapsamlı ürün yönetimi (CRUD).
 
+Kategori Yönetimi: Dinamik kategori ağacı oluşturma ve düzenleme.
 
-\* \*\*Backend:\*\* .NET 8.0, ASP.NET Core MVC
+Rol Yönetimi: Admin ve Kullanıcı yetkilendirmeleri.
 
-\* \*\*Veritabanı:\*\* MS SQL Server, Entity Framework Core (Code First)
+Sipariş Takibi: Gelen siparişleri görüntüleme ve durum güncelleme.
 
-\* \*\*Frontend:\*\* Bootstrap 5, HTML5, CSS3
+💻 Teknolojiler ve Mimari
 
-\* \*\*Mimari:\*\* Katmanlı Mimari (Business, DataAccess, UI)
+Backend: C#, .NET 8.0, ASP.NET Core MVC
 
+Veritabanı: MS SQL Server, Entity Framework Core (Code First)
 
+Frontend: HTML5, CSS3, Bootstrap 5, JavaScript
 
----
+Mimari: Katmanlı Mimari (Entity, DataAccess, Business, UI Katmanları)
 
+Tasarım Desenleri: Repository Pattern, Dependency Injection
 
+⚙️ Kurulum
 
-\## ⚙️ Kurulum
+Projeyi klonlayın:
 
-
-
-Projeyi kendi bilgisayarınızda çalıştırmak için:
-
-
-
-1\.  `appsettings.json` dosyasındaki "ConnectionStrings" alanını kendi SQL sunucunuza göre düzenleyin.
-
-2\.  Terminali açın ve veritabanını oluşturun:
-
-&nbsp;   ```bash
-
-&nbsp;   dotnet ef database update --project App.Data --startup-project App.Eticaret
-
-&nbsp;   ```
-
-3\.  Projeyi başlatın.
+git clone [https://github.com/sercancavus/fantastic-dotnet-ecommerce-project.git](https://github.com/sercancavus/fantastic-dotnet-ecommerce-project.git)
 
 
+Veritabanı Ayarı:
+appsettings.json dosyasındaki ConnectionStrings alanını kendi SQL sunucunuza göre düzenleyin.
 
----
+Veritabanını Oluşturun:
+Terminali açın ve şu komutu çalıştırın:
 
+dotnet ef database update --project App.Data --startup-project App.Eticaret
+
+
+Projeyi Başlatın:
+
+dotnet run --project App.Eticaret
 
 
 <p align="center">
+Developed by <b>Sercan Çavuş</b>
 
-&nbsp; 👉 <a href="https://www.linkedin.com/in/sercancavus">LinkedIn Profilim</a>
 
+
+
+
+👉 <a href="https://www.linkedin.com/in/sercancavus">LinkedIn Profile</a>
 </p>
-
